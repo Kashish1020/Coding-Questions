@@ -1,0 +1,50 @@
+3. NUMBER OF GAMES
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    int p, d, m, s;
+    scanf("%d %d %d %d", &p, &d, &m, &s);
+
+
+    int value = p;
+    int count = 0;
+    while(value <= s && value > m){
+        count++;
+        s = s - value;
+        value = value - d;
+    
+    }
+    
+    if(value <= s){
+        value = m;
+        while(value <= s){
+            s = s - value;
+            count++;
+        }
+    }
+            
+    printf("%d", count);
+     return 0;
+}
+
+
+
+4. - GROUP SUM
+
+
+#include <stdio.h>
+int main(void) {
+
+    int k;
+    scanf("%d", &k);
+    
+    long long sum = (long long)k * k * k;
+ 
+    printf("%lld", sum);
+    
+    return 0;
+}
+
