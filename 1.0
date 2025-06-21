@@ -1,0 +1,63 @@
+//Codechef - Operators
+3. FIND-POINT - MID-POINT THEOREM
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+    
+    int px, py, qx, qy;
+    int x, y;
+    scanf("%d %d %d %d", &px, &py, &qx, &qy); // -100 to 100 fits in int - data type constraint
+    
+    x = qx - px;
+    y = qy - py;
+    
+    if(x > 0){
+        x = px + 2 * x;
+        y = py + 2 * y;
+    }
+    else{
+        x = px - 2 * (abs(x));
+        y = py - 2 * (abs(y));
+    }
+    
+
+    printf("%d %d", x, y);
+    
+    return 0;
+}
+
+
+4. GAME WITH CELLS -- ****
+
+#include <stdio.h>
+int main(void) {
+    
+    
+    int n, m;
+    int result;
+    scanf("%d %d", &n, &m);
+    
+    result = ((n+1)/2) * ((m+1)/2) ;
+    printf("%d", result);
+    
+    return 0;
+}  
+
+5. MIN HEIGHT TRIANGLE
+
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+   
+    int b,a;
+    float result;
+    scanf("%d %d", &b, &a);
+    
+    result = 2.0 * a / b;
+    int h = ceil(result);
+    printf("%d", h);
+    return 0;
+}
+
+   
